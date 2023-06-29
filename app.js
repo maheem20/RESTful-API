@@ -7,3 +7,7 @@ app.get("/api", (req, res) => {
         message: "This is rest api working"
     });
 });
+
+app.listen(3000, () => {
+    console.log("Server up and running");
+});
