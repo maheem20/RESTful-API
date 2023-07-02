@@ -14,6 +14,9 @@ module.exports = {
                 data.number
             ],
             (error, results, fields) => {
+                if (error) {
+                    return callBack(error);
+                }
             }
         )
     }
