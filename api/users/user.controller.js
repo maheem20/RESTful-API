@@ -3,6 +3,7 @@ const { create } = require('./user.service');
 module.exports = {
     createUser: (req, res) => {
         const body = req.body;
+        const salt = genSaltSync(10);
         create(body, (err, results) => {
             if (err) {
                 console.log(err);
